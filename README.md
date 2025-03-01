@@ -105,5 +105,35 @@ Training history is plotted for analysis.
 Sample test images are displayed with predicted labels.
 
 
+Feedforward Neural Network for SVHN Classification
+Overview
+This project implements a feedforward neural network to classify images from the SVHN (Street View House Numbers) dataset. The model is trained with various hyperparameters, data augmentation, and regularization techniques to improve accuracy.
 
+Dataset
+The dataset used is SVHN Cropped, which consists of 32x32 RGB images of house numbers. It is loaded using TensorFlow Datasets (tfds).
+
+Training Samples: ~73,257
+Test Samples: ~26,032
+Classes: 10 (digits 0-9)
+Features
+Customizable Model: The architecture supports easy modification of the number of layers and neurons.
+Data Augmentation: Includes rotation, width/height shift, and zoom to improve generalization.
+Regularization: Uses L2 weight decay and Dropout layers to prevent overfitting.
+Batch Normalization: Applied after each dense layer to stabilize training.
+Cross-Entropy Loss: Used as the loss function for classification.
+Performance Visualization: Training and validation accuracy/loss are plotted for analysis.
+Dependencies
+TensorFlow
+NumPy
+Matplotlib
+Scikit-learn
+Model Training
+Optimizer: Adam with a learning rate of 1e-4.
+Batch Size: 32
+Epochs: 30
+Activation Function: ReLU for hidden layers, Softmax for output.
+Train-Test Split: 90% training, 10% validation.
+Results
+The final test accuracy is 48% after training.
+A confusion matrix is plotted to analyze class-wise performance.
 
